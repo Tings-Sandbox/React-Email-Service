@@ -1,5 +1,5 @@
 
-![alt tag](https://avatars1.githubusercontent.com/u/3128978?v=3&s=200) KQED Code Coding Challenge 
+![alt tag](https://avatars1.githubusercontent.com/u/3128978?v=3&s=200) KQED Code Challenge 
 ===========================
 
 Thank you for taking the time to complete the KQED Media Technology code challenge. The purpose of this exercise is to demonstrate your expertise and ablity to problem solve an assignment similar to what you would be expected to do at KQED.
