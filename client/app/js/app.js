@@ -8,8 +8,10 @@ export class EmailForm extends Component {
   constructor(props){
     super(props);
     this.state = {
-      email: "",
-      message: ""
+      to      : "",
+      from    : "",
+      subject : "KQED Article",
+      message : ""
     };
   }
 
@@ -35,20 +37,28 @@ export class EmailForm extends Component {
     // this.setState({email: '', message: ''});
   }
 
-  updateEmail(e) {
-    this.setState({email: e.target.value});
+  updateTo(e) {
+    this.setState({to: e.target.value});
   }
 
+  updateFrom(e) {
+    this.setState({from: e.target.value});
+  }
+
+  updateSubject(e) {
+    this.setState({subject: e.target.value});
+  }
+  
   updateMessage(e) {
     this.setState({message: e.target.value});
   }
-  
 
   render(){
     return (
         <form className="emailForm" onSubmit={this.handleSubmit.bind(this)}>
-          <input type="text" placeholder="Your email" value={this.state.email} onChange={this.updateEmail.bind(this)}/>
-          <input type="text" placeholder="Your message" value={this.state.message} onChange={this.updateMessage.bind(this)}/>
+          <input type="text" placeholder="From" value={this.state.to} onChange={this.updateTo.bind(this)}/>
+          <input type="text" placeholder="To" value={this.state.from} onChange={this.updateFrom.bind(this)}/>
+          <input type="text" placeholder="Optional message" value={this.state.message} onChange={this.updateMessage.bind(this)}/>
           <input type="submit" value="Post"/>
         </form>
     );
