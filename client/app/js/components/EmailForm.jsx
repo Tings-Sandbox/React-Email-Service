@@ -33,11 +33,8 @@ export default class EmailForm extends Component {
         alert('Your message has been sent!');
 
         console.log('response', res);
-      }).catch(function(err){
-        console.log('err', err);
-      })
+      });
     }
-
   }
 
   updateTo(e) {

@@ -11,10 +11,10 @@ var emailAPIs = {
                     if (!cb){
                       res.status(400).send("Emails invalid");
                     } else {
-                      cb()
+                      cb();
                     };
                   } else {
-                    res.status(/^(partly_done|done)$/.test(status) ? 200 : 500).send("Success sending from Sendgrid ");
+                    res.status(200).send("Success sending from Sendgrid ");
                   }                  
                 });
               },
@@ -26,10 +26,10 @@ var emailAPIs = {
                     if (cb === false){
                       res.status(400).send("Emails invalid");
                     } else {
-                      cb()
+                      cb();
                     };
                   } else {
-                    res.status(/^(partly_done|done)$/.test(status) ? 200 : 500).send("Success sending from Mailgun ");
+                    res.status(200).send("Success sending from Mailgun ");
                   }                  
                 });
             }
