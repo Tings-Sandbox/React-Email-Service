@@ -29,15 +29,15 @@ export default class EmailForm extends Component {
         },
         body: JSON.stringify(context.state)
       }).then(function(res){
+        context.setState({to: '', from: '', subject: 'KQED Article', message: ''});
+        alert('Your message has been sent!');
+
         console.log('response', res);
       }).catch(function(err){
         console.log('err', err);
       })
     }
 
-    // console.log('this.state', this.state);
-
-    // this.setState({email: '', message: ''});
   }
 
   updateTo(e) {
