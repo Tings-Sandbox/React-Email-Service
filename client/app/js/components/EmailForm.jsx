@@ -22,7 +22,7 @@ export default class EmailForm extends Component {
     console.log(context.state);
 
     if (self.fetch){
-      fetch('http://localhost:3000/api/send', {
+      fetch('/api/send', {
         method: "POST",
         headers: {
           "Content-type" : "application/json"
