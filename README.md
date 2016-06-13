@@ -1,7 +1,7 @@
-#Email 
+#Email Service
 
-![alt text](./screenshot)
-[https://kqed-challenge.herokuapp.com/] - Deployed on Heroku
+![alt text](./screenshot.png)
+[https://kqed-challenge.herokuapp.com/] - Try it here!
 
 Built on React, HTML/CSS, Node.js, Webpack, this full-stack Email Service allows users to send emails. The service connects with multiple email providers including [Sendgrid](https://sendgrid.com/user/signup) and [Mailgun](http://www.mailgun.com), to ensure greater reliability. Email Service will differ to the next provider if one fails. 
 
@@ -23,12 +23,17 @@ The API keys are stored in a separate file and can be gitignored when pushing to
 ##Post-MVP 
 If I had additional time on the project, I would have liked to incorporate news stories from NPR, allowing users to share specific stories via email through the website. 
 
-
 ## See more of my projects and my profile here
-Blog    : [https://tingdeng.wordpress.com/]
-LinkedIn: [https://www.linkedin.com/in/tingdeng]
-Resume  : [http://bit.ly/tingdeng]
-Github  : [https://github.com/viinasu]
-        : [https://github.com/tings-sandbox] 
+Blog    : https://tingdeng.wordpress.com/
+
+LinkedIn: https://www.linkedin.com/in/tingdeng
+
+Resume  : http://bit.ly/tingdeng
+
+Github  : https://github.com/viinasu
+
+        : https://github.com/tings-sandbox
+
+##Thank you for visiting!
 
 
