@@ -14,7 +14,7 @@ var emailAPIs = {
                       cb()
                     };
                   } else {
-                    res.status(/^(partly_done|done)$/.test(status) ? 200 : 500).send("Success sending from Sendgrid ",JSON.stringify(json));
+                    res.status(/^(partly_done|done)$/.test(status) ? 200 : 500).send("Success sending from Sendgrid ");
                   }                  
                 });
               },
@@ -29,7 +29,7 @@ var emailAPIs = {
                       cb()
                     };
                   } else {
-                    res.status(/^(partly_done|done)$/.test(status) ? 200 : 500).send("Success sending from Mailgun ",JSON.stringify(json));
+                    res.status(/^(partly_done|done)$/.test(status) ? 200 : 500).send("Success sending from Mailgun ");
                   }                  
                 });
             }

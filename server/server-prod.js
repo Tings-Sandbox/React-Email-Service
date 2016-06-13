@@ -10,12 +10,11 @@ module.exports = {
     const app = express()
     const indexPath = path.join(__dirname, '/../index.html')
     const publicPath = express.static(path.join(__dirname, '../dist'))
+    app.use(cors());
     app.use(bodyParser.json());
 
 
-
     app.use('/dist', publicPath);
-    app.use(cors());
 
     app.post('/api/send', function(req, res){
       sendEmail(req, res);
