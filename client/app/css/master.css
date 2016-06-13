@@ -1,0 +1,65 @@
+/*
+
+COLOR PALETTE
+lightblue: #C5D5E4;
+skyblue: #4A949C;
+brown: #7E6551;
+
+*/
+
+h1,h2,h3,h4 {
+  margin: 0;
+}
+
+body{
+  padding: 0 30px;
+}
+
+h1 {
+  background-color: #1395D9;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  font-family: 'Amatic SC', cursive;
+  font-weight: 500;
+}
+
+h1::first-letter {
+
+}
+
+
+.emailform {
+  border: 2px solid #1395D9;
+
+}
+
+input {
+  display: block;
+  margin: 15px auto;
+  font-size: 17px;
+  border: groove 1px #4A949C;
+  padding: 8px;
+  padding-left: 15px;
+  font-family: 'Roboto';
+  width: 250px;
+}
+
+
+form .message {
+  height: 200px;
+}
+
+.message::placeholder {
+  color: blue;
+  text-align: top;
+}
+
+input[type="submit"] {
+  background-color: #94CD05;
+  font-style: bold;
+}
+
+input[type="submit"]:hover {
+  background-color: #B2E929;
+}

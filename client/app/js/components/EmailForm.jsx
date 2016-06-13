@@ -55,11 +55,11 @@ export default class EmailForm extends Component {
 
   render(){
     return (
-        <form className="emailForm" onSubmit={this.handleSubmit.bind(this)}>
+        <form onSubmit={this.handleSubmit.bind(this)}>
           <input type="text" placeholder="From" value={this.state.to} onChange={this.updateTo.bind(this)}/>
           <input type="text" placeholder="To" value={this.state.from} onChange={this.updateFrom.bind(this)}/>
-          <input type="text" placeholder="Optional message" value={this.state.message} onChange={this.updateMessage.bind(this)}/>
-          <input type="submit" value="Post"/>
+          <input type="text" className="message" placeholder="Optional message" value={this.state.message} onChange={this.updateMessage.bind(this)}/>
+          <input type="submit" value="POST"/>
         </form>
     );
   }
