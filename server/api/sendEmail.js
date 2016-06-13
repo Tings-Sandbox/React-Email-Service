@@ -5,26 +5,33 @@ var mailgun = require('mailgun-js')({apiKey: keys.MAILGUN_APIKEY, domain: 'sandb
 var payload; 
 
 var emailAPIs = {
-  sendgrid : function(req, res, cb){
-                  sendgrid.send(payload, function(err, json){
+  sendgrid :  function(req, res, cb){
+                sendgrid.send(payload, function(err, json){
                   if (err) { 
-                    console.log(err);
-                    cb(req, res);
-                  }
-                  console.log('json', json);
-                  res.send(json);
+                    if (!cb){
+                      res.status(400).send("Emails invalid");
+                    } else {
+                      cb()
+                    };
+                  } else {
+                    res.status(201).send("Success sending from Sendgrid ",JSON.stringify(json));
+                  }                  
                 });
               },
 
   mailgun : function(req, res, cb){
                 mailgun.messages().send(payload, function(err, json){
-                if (err) {
-                  console.log(err);
-                  cb(req, res);
-                }
-                console.log(json);
-                res.send(json);
-              })
+                    console.log('inside send')
+                  if (err) { 
+                    if (cb === false){
+                      res.status(400).send("Emails invalid");
+                    } else {
+                      cb()
+                    };
+                  } else {
+                    res.status(201).send("Success sending from Mailgun ", JSON.stringify(json));
+                  }                  
+                });
             }
 }
 
@@ -37,5 +44,7 @@ module.exports = function(req, res){
     text    : req.body.message
   };
 
-  emailAPIs.sendgrid(req, res, emailAPIs.mailgun);
+  emailAPIs.sendgrid(req, res, function(){
+    emailAPIs.mailgun(req, res, false);
+  });
 }
