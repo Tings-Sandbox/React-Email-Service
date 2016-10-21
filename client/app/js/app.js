@@ -6,6 +6,7 @@ import EmailForm from './components/EmailForm.jsx';
 import '../css/master.css';
 const { Router, Route, hashHistory } = require('react-router');
 
+// Without the React Router
 /* export class App extends Component {
   render(){
     return (
@@ -14,7 +15,7 @@ const { Router, Route, hashHistory } = require('react-router');
       </div>
     );
   }
-} */
+} */ 
 
 const App = () => {
 	<Router history={hashHistory}>
