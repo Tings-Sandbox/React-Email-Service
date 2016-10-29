@@ -4,7 +4,7 @@
   "description": "email generator",
   "scripts": {
     "build": "webpack --config ./webpack.prod.config.js --progress --colors",
-    "start": "node server/app-prod.js"
+    "start": "nodemon server/app-prod.js"
   },
   "keywords": [
     ""

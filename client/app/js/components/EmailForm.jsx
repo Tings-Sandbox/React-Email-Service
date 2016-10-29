@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
 import {createStore} from 'redux';
 
+
 export default class EmailForm extends Component {
 
   constructor(props){
